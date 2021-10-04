@@ -1,7 +1,7 @@
 
 exports.creds = {
   // Required
-  identityMetadata: 'https://login.microsoftonline.com/YOUR_TENANT_GUID/.well-known/openid-configuration', 
+  identityMetadata: 'https://login.microsoftonline.com/f167cc2d-a48e-4f34-9fb6-f0ffe783ca95/v2.0/.well-known/openid-configuration', 
   // or equivalently: 'https://login.microsoftonline.com/<tenant_guid>/.well-known/openid-configuration'
   //
   // or you can use the common endpoint
@@ -9,7 +9,7 @@ exports.creds = {
   // To use the common endpoint, you have to either set `validateIssuer` to false, or provide the `issuer` value.
 
   // Required, the client ID of your app in AAD  
-  clientID: '<your_client_id>',
+  clientID: '1b6a91ef-93dd-474f-b98e-7b7d5ee04040',
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   responseType: 'code id_token',
@@ -25,7 +25,7 @@ exports.creds = {
   
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
   // If app key contains '\', replace it with '\\'.
-  clientSecret: 'YOUR_CLIENT_SECRET', 
+  clientSecret: '3eb6eb27-9b02-4917-a1f8-e4ae264fb296', 
 
   // Required to set to false if you don't want to validate issuer
   validateIssuer: true,
