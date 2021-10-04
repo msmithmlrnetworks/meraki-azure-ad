@@ -1,6 +1,10 @@
 <% if (!user) { %>
-	<h2>Welcome! Please log in.</h2>
-	<a href="/login">Log In</a>
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
+	<h5 class="card-title">MLR Azure Auth</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Please select an option below</h6>
+	<a href="/login" class="btn btn-primary">Log In</a>
+	</div></div>
 <% } else { %>
 <p>UPN: <%= user._json.upn %></p>
 <p>Profile ID: <%= user.id %></p>
