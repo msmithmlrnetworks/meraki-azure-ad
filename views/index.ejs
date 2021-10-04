@@ -1,8 +1,15 @@
 <% if (!user) { %>
-	<h2>Welcome! Please log in.</h2>
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
+	<h5 class="card-title">MLR Azure Auth</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Please select an option below</h6>
 	<a href="/login">Log In</a>
+	</div></div>
 <% } else { %>
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
 	<h2>Hello, <%= user.displayName %>.</h2>
 	<a href="/account">Account Info</a></br>
 	<a href="/logout">Log Out</a>
+	</div></div>	
 <% } %>
