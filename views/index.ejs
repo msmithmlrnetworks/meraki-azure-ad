@@ -3,13 +3,15 @@
 		<div class="card-body">
 	<h5 class="card-title">MLR Azure Auth</h5>
     <h6 class="card-subtitle mb-2 text-muted">Please select an option below</h6>
-	<a href="/login">Log In</a>
+	<a href="/login" class="btn btn-primary">Log In</a>
 	</div></div>
 <% } else { %>
 	<div class="card" style="width: 18rem;">
 		<div class="card-body">
+			<h5 class="card-title">MLR Azure Auth</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Please select an option below</h6>
 	<h2>Hello, <%= user.displayName %>.</h2>
-	<a href="/account">Account Info</a></br>
-	<a href="/logout">Log Out</a>
+	<a href="/account" class="btn btn-secondary">Account Info</a></br>
+	<a href="/logout" class="btn btn-primary">Log Out</a>
 	</div></div>	
 <% } %>
