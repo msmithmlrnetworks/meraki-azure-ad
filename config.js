@@ -54,7 +54,7 @@ exports.creds = {
   ],
 
   // Optional. The additional scope you want besides 'openid', for example: ['email', 'profile'].
-  scope: null,
+  scope: ['profile'],
 
   // Optional, 'error', 'warn' or 'info'
   loggingLevel: 'info',
