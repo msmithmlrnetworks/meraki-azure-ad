@@ -266,7 +266,7 @@ app.post('/auth/openid/return',
     )(req, res, next);
   },
   function(req, res) {
-    res.redirect(base_grant_url);
+    res.redirect(base_grant_url || 'https://lightspeedauth.mlrnetworks.co.uk');
   });
 
 // 'logout' route, logout from passport, and destroy the session with AAD.
