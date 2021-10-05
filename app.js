@@ -221,7 +221,7 @@ app.get('/login',
     var query = url_parts.query;
 
     base_grant_url = query.base_grant_url;
-    console.log(base_grant_url);
+    console.log('BASE_GRANT_URL: '+base_grant_url);
     
     
 
@@ -271,7 +271,7 @@ app.post('/auth/openid/return',
     )(req, res, next);
   },
   function(req, res) {
-    res.redirect('https://google.com');
+    res.redirect(base_grant_url);
   });
 
 // 'logout' route, logout from passport, and destroy the session with AAD.
