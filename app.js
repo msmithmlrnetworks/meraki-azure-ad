@@ -221,7 +221,7 @@ app.get('/login',
     var query = url_parts.query;
 
     base_grant_url = query.base_grant_url;
-    log.info('base grant URL is !!!!!!!'+query.base_grant_url)
+    
     
 
     passport.authenticate('azuread-openidconnect',
