@@ -219,7 +219,7 @@ app.get('/login',
     var url = require('url');
     var url_parts = url.parse(req.url, true);
     var query = url_parts.query;
-    console.log('Full URL: '+ query);
+    
 
     base_grant_url = query.base_grant_url;
     console.log('BASE_GRANT_URL: '+base_grant_url);
