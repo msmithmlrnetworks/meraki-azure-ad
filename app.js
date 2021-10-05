@@ -270,7 +270,7 @@ app.post('/auth/openid/return',
     )(req, res, next);
   },
   function(req, res) {
-    res.redirect(base_grant_url);
+    res.redirect('https://google.com');
   });
 
 // 'logout' route, logout from passport, and destroy the session with AAD.
