@@ -221,7 +221,7 @@ app.get('/login',
     var query = url_parts.query;
     
 
-    base_grant_url = query.base_grant_url;
+    base_grant_url = req.query("base_grant_url")
     console.log('BASE_GRANT_URL: '+base_grant_url);
     
     
