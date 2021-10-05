@@ -205,7 +205,7 @@ app.get('/', function(req, res) {
   var url_parts = url.parse(req.url, true);
   var query = url_parts.query;
 
-  base_grant_url = query.base_grant_url;
+  base_grant_url = req.query.base_grant_url;
   res.render('index', { user: req.user });
 });
 
