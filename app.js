@@ -137,6 +137,7 @@ passport.use(new OIDCStrategy({
         if (!user) {
           // "Auto-registration"
           users.push(profile);
+          log.info(profile);
           return done(null, profile);
         }
         return done(null, user);
@@ -220,6 +221,8 @@ app.get('/login',
     var query = url_parts.query;
 
     base_grant_url = query.base_grant_url;
+    log.info('base grant URL is !!!!!!!'+query.base_grant_url)
+    
 
     passport.authenticate('azuread-openidconnect',
       {
@@ -258,6 +261,7 @@ app.get('/auth/openid/return',
 // redirected to '/' (home page); otherwise, it passes to the next middleware.
 app.post('/auth/openid/return',
   function(req, res, next) {
+    log.info('We received a return from AzureAD.');
     passport.authenticate('azuread-openidconnect',
       {
         response: res,                      // required
